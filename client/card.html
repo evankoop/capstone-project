@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make A Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        
+    <div>
+    <header>
+        <h1>Evan's Virtual Baseball Cards</h1>
+        <ol>
+            <li class="nav"><a href="./card.html">Make A Card</a></li>
+            <li class="nav"><a href="./collection.html">Collection</a></li>
+        </ol>
+        <img class="baseball" src="https://clipartix.com/wp-content/uploads/2016/12/Baseball-clipart-dr-odd.png"/>
+    </header>
+    </div>
+    <br>
+    <main>
+        <p>
+            Welcome to Evan's Virtual Baseball Cards! Here you can create your very own custom baseball card! 
+            <br>
+            Just add the player's name, team, position, and an image URL. Once you've created your card, it can be viewed in the Collection page!
+        </p>
+        <br>
+        <div class="card">
+        <h2>Make A Card</h2>
+        <br>
+        <form id="submit" class="submit">
+            <input 
+                type="text"
+                id="name"
+                class="textbox"
+                placeholder="Player Name"/>
+            <input 
+                type="text"
+                id="team"
+                class="textbox"
+                placeholder="Team"/>
+            <input 
+                type="text"
+                id="position"
+                class="textbox"
+                placeholder="Position"/>
+            <input 
+                type="text"
+                id="img"
+                class="textbox"
+                placeholder="Image URL"/>
+            <button>Submit Card</button>
+        </form>
+        </div>
+    </main>
+</body>
+</html>
