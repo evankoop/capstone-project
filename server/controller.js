@@ -24,11 +24,11 @@ module.exports = {
 
         INSERT INTO cards(name, team, position, image_url)
         VALUES
-        ('Adley Rutschman', 'Orioles', 'Catcher', 'https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTg5NjQ5NTg3MTE4NTQ4MTY1/usatsi_18324070_168388303_lowres.jpg'),
-        ('Vladimir Guerrero Jr.', 'Blue Jays', '1B', 'https://fivethirtyeight.com/wp-content/uploads/2021/05/GettyImages-1317350303-e1622089820183.jpg?w=575'),
-        ('Edwin Diaz', 'Mets', 'Pitcher', 'https://www.si.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkwMTczMDM2Nzk0NjE5MTYx/usatsi_18527820.jpg'),
-        ('Aaron Judge', 'Yankees', 'RF', 'https://fivethirtyeight.com/wp-content/uploads/2022/05/GettyImages-1397823968-4x3-1.jpg?w=916'),
-        ('Jonathan India', 'Reds', '2B', 'https://cdn.vox-cdn.com/thumbor/cdf_uym3wVV08Uv7gUicjicxQoU=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23017519/1342744414.jpg');
+        ('Adley Rutschman', 'Orioles', 'Catcher', 'https://fivethirtyeight.com/wp-content/uploads/2020/05/GettyImages-1208312227-1-e1590103124225.jpg?w=375'),
+        ('Vladimir Guerrero Jr.', 'Blue Jays', '1B', 'https://fivethirtyeight.com/wp-content/uploads/2021/05/GettyImages-1317350303-e1622089820183.jpg?w=375'),
+        ('Edwin Diaz', 'Mets', 'Pitcher', 'https://www.justbaseball.com/wp-content/uploads/sites/2/2022/05/Screenshot-218.png?w=375'),
+        ('Aaron Judge', 'Yankees', 'RF', 'https://fivethirtyeight.com/wp-content/uploads/2022/05/GettyImages-1397823968-4x3-1.jpg?w=575'),
+        ('Jonathan India', 'Reds', '2B', 'https://cdnph.upi.com/pv/upi/ee600c8bf495d05ff4e2d2d1bf240513/MLB-REDSCARDINALS.jpg?w=375');
         `)
         .then(() => {
             console.log('database seeded!')
@@ -48,6 +48,13 @@ module.exports = {
         INSERT INTO cards (name, team, position, image_url) 
         VALUES
         ('${name}', '${team}', '${position}', '${image_url}')
+        `).then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log('error', err))
+    },
+    deleteCard: (req, res) => {
+        let {id} = req.params
+        sequelize.query(`
+        DELETE FROM cards WHERE card_id = ${id}
         `).then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log('error', err))
     }

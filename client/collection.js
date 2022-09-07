@@ -2,6 +2,7 @@ let collectionBtn = document.querySelector('button')
 let cardList = document.querySelector('#card-list')
 
 
+
 const getCollection = () => {
     axios.get('http://localhost:4005/collection')
     .then((res) => {
@@ -14,13 +15,15 @@ const getCollection = () => {
             <div class="name"><p>${element.name}</p></div>
             <div class="position">${element.position}</div>
             <div class="team">${element.team}</div>
-            <div><button class="delete">Delete Card</button></div>
+            <div><button class="delete" onclick="delete(${element.id})">Delete Card</button></div>
+            </div>
             </div>
             `
             cardList.innerHTML += baseballCard
         })
     })
 }
+
 
 
 

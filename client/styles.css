@@ -196,6 +196,20 @@ a {
   text-transform: uppercase; 
 }
 
+.card:disabled {
+  pointer-events: none;
+}
+
+.card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.card:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
 .photo {
   position: absolute;
     top: 0;
@@ -228,6 +242,7 @@ a {
     left: 10px;
     color: white;
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+    text-shadow: 1px 0 black, -1px 0 black;
 }
 
 .team {
@@ -239,7 +254,9 @@ a {
     right: 10px;
     color: white;
     font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+    text-shadow: 1px 0 black, -1px 0 black;
 }
+
 
 .delete {
   appearance: none;
