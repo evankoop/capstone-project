@@ -4,11 +4,6 @@ let form = document.querySelector('form')
 let messageId = document.querySelector('#message')
 
 
-const deleteCard = (id) => {
-    axios.delete(`https://localhost:4005/collection/${id}`)
-    .then(() => getCollection())
-    .catch(err => console.log(err))
-}
 
 
 function handleSubmit(e) {

@@ -53,6 +53,7 @@ module.exports = {
     },
     deleteCard: (req, res) => {
         let {id} = req.params
+        console.log(id)
         sequelize.query(`
         DELETE FROM cards WHERE card_id = ${id}
         `).then(dbRes => res.status(200).send(dbRes[0]))
