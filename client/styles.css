@@ -187,3 +187,60 @@ a {
 .colldiv {
   text-align: center;
 }
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  border: 15px rgb(170, 121, 57) solid;
+  text-transform: uppercase; 
+}
+
+.photo {
+  position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 296px;
+    width: 196px;
+    border: 4px rgb(0, 0, 0) solid;
+}
+
+.name {
+  position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 76%;
+    height: 50px;
+    text-align: center;
+    font-size: 100%;
+    background: rgb(200, 0, 0);
+    border: 2px rgb(0, 0, 0) solid;
+    z-index: 10;
+}
+
+.position {
+  position: absolute;
+    z-index: 15;
+    font: 1em sans-serif;
+    
+    top: 15px;
+    left: 10px;
+    color: white;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+}
+
+.team {
+  position: absolute;
+    z-index: 15;
+    font: 1em sans-serif;
+    
+    top: 15px;
+    right: 10px;
+    color: white;
+    font-family: Impact,Haettenschweiler,Franklin Gothic Bold,Charcoal,Helvetica Inserat,Bitstream Vera Sans Bold,Arial Black,sans serif; 
+}
+
+
+
+

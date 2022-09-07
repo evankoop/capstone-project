@@ -27,7 +27,7 @@
             Just add the player's name, team, position, and an image URL. Once you've created your card, it can be viewed in the Collection page!
         </p>
         <br>
-        <div class="card">
+        <div class="make-card">
         <h2>Make A Card</h2>
         <br>
         <form id="submit" class="submit">
@@ -51,9 +51,12 @@
                 id="img"
                 class="textbox"
                 placeholder="Image URL"/>
-            <button>Submit Card</button>
+            <button class="submit-button">Submit Card</button>
         </form>
         </div>
+        <div id="message"></div>
     </main>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="./card.js"></script>
 </body>
 </html>

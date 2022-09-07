@@ -3,12 +3,15 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const {SERVER_PORT} = process.env
-const {seed} = require('./controller.js')
+const {seed, getCollection, createCard} = require('./controller.js')
 
 app.use(express.json())
 app.use(cors())
 
 app.post('/seed', seed)
+
+app.get('/collection', getCollection)
+app.post('/collection', createCard)
 
 
 
