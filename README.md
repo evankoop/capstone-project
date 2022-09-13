@@ -23,4 +23,9 @@ Evan's Virtual Baseball Cards is a fullstack application that allows users to ma
 -Set up server in your terminal by typing **node server/server.js** (You can also use **nodemon**)
 -Use application as you wish
 
+![alt text](https://i.postimg.cc/259D9j46/Screenshot-2022-09-13-131204.png)
+![alt text](https://i.postimg.cc/SNhwrYwd/Screenshot-2022-09-13-131252.png)
+
+
+
 ### You can learn more about the developer here: ***https://www.linkedin.com/in/evan-koop-46497a246/***
